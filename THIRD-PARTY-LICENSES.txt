@@ -5,7 +5,7 @@ Enthalpia includes the open-source components listed below. Each is distributed 
 reproduced here as its authors require.
 
 NIST REFPROP is NOT included. Enthalpia only calls a copy that is already installed and licensed on the
-computer. DWSIM and UniSim Design are not included and no code or data from them is used.
+computer. No code and no data of any other process simulator is included or used.
 
 Data inside these components that carries its own terms (see the texts below and the upstream
 projects): ChemSep binary-interaction and pure-component data (inside thermo), Dortmund Data Bank
