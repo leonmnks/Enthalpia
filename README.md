@@ -2,12 +2,16 @@
 
 **A desktop process simulator for chemical engineering: steady-state and dynamic simulation, free to use.**
 
-Version 1.3 for Windows. Copyright (c) 2026 Leonidas Manikis. All rights reserved.
+Version 2.0 for Windows. Copyright (c) 2026 Leonidas Manikis. All rights reserved.
 
 Enthalpia lets you choose components and a property package, draw a flowsheet of unit operations joined by
 material streams, enter the feeds and the specifications, and see every stream and every duty calculated from
 the mass and energy balances with rigorous phase equilibrium. It is written for students and for engineers who
 want a first answer quickly and want to see how it was reached.
+
+![The opening page: start a new case, continue a recent one, or open an example](pictures/01_start.png)
+
+*The opening page: start a new case, continue a recent one, or open an example*
 
 ![The flowsheet: units from the palette on the left, results in the workbook below](pictures/09_sim_gas_plant.png)
 
@@ -123,7 +127,7 @@ repository: [Enthalpia-Documentation.pdf](Enthalpia-Documentation.pdf). The same
 
 ## Download and install
 
-1. Go to **[Releases](../../releases/latest)** and download `Enthalpia-1.3-Windows.zip` (337 MB).
+1. Go to **[Releases](../../releases/latest)** and download `Enthalpia-2.0-Windows.zip` (337 MB).
 2. Unpack the ZIP. Keep `Enthalpia-Setup.exe` and `Enthalpia-payload.zip` together in one folder.
 3. Double-click `Enthalpia-Setup.exe` and follow the steps. No administrator rights are needed.
 4. Start Enthalpia from the Desktop or the Start menu.
@@ -133,10 +137,10 @@ paid code-signing certificate. Choose **More info**, then **Run anyway**. To be 
 is the one published here, compare its SHA-256 fingerprint with this one:
 
 ```
-9a7f6f5a7d3e3e7507399bae7c5c1a9c74a5e1d79cf82161241f4cd978e1fb67  Enthalpia-1.3-Windows.zip
+ab96d2bb0fe735b950f5d3bda2fe481fe153f148216ce151d66f43b786728be2  Enthalpia-2.0-Windows.zip
 ```
 
-In PowerShell: `Get-FileHash Enthalpia-1.3-Windows.zip -Algorithm SHA256`
+In PowerShell: `Get-FileHash Enthalpia-2.0-Windows.zip -Algorithm SHA256`
 
 **Needs:** Windows 10 or 11, 64-bit, about 1 GB of disk space. Nothing else has to be installed.
 To remove it: Settings > Apps > Enthalpia > Uninstall.
