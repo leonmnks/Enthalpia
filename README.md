@@ -2,12 +2,12 @@
 
 **A desktop process simulator for chemical engineering: steady-state and dynamic simulation, free to use.**
 
-[![Download for Windows](https://img.shields.io/badge/Download-Windows%20(337%20MB)-1a7431?style=for-the-badge&logo=windows)](../../releases/latest/download/Enthalpia-2.0-Windows.zip)
-[![Download for macOS](https://img.shields.io/badge/Download-macOS%20Apple%20silicon%20(134%20MB)-1a7431?style=for-the-badge&logo=apple)](../../releases/latest/download/Enthalpia-2.0-macOS-arm64.dmg)
+[![Download for Windows](https://img.shields.io/badge/Download-Windows%20(337%20MB)-1a7431?style=for-the-badge&logo=windows)](../../releases/latest/download/Enthalpia-2.1-Windows.zip)
+[![Download for macOS](https://img.shields.io/badge/Download-macOS%20Apple%20silicon%20(135%20MB)-1a7431?style=for-the-badge&logo=apple)](../../releases/latest/download/Enthalpia-2.1-macOS-arm64.dmg)
 
 How to install is described [further down](#download-and-install).
 
-Version 2.0 for Windows and macOS. Copyright (c) 2026 Leonidas Manikis. All rights reserved.
+Version 2.1 for Windows and macOS. Copyright (c) 2026 Leonidas Manikis. All rights reserved.
 
 [![Support the project](https://img.shields.io/badge/Support%20the%20project-Donate-1a7431?style=for-the-badge)](https://revolut.me/l_manikis)
 
@@ -34,7 +34,7 @@ want a first answer quickly and want to see how it was reached.
 
 ### 1. Choose the components and the property package
 
-Pick from more than 6,000 components (over 70,000 can be found by name or CAS number) and one of 23 property
+Pick from more than 6,000 components (over 70,000 can be found by name or CAS number) and one of 24 property
 packages: cubic equations of state, activity-coefficient models, reference equations for pure fluids, steam tables.
 The program says which packages suit the mixture and what data is missing.
 
@@ -138,9 +138,33 @@ Reports go to Excel and Word. Light and dark mode, any unit set, and a recovery 
 The guide, with seven tutorials and the validation of the program against reference data, is in this
 repository: [Enthalpia-Documentation.pdf](Enthalpia-Documentation.pdf). The same guide opens from the Help menu.
 
+## Can the results be trusted?
+
+Check for yourself: **[VALIDATION.md](VALIDATION.md)** sets 188 results of Enthalpia beside values that do not
+come from a simulator: the reference equations of state of the pure fluids, the GERG-2008 equation for natural
+gas, the international steam tables, azeotropes from the handbooks, and hand calculations. Nothing is left out
+of that table, including the cases where the program is weakest.
+
+| | Checks | Average difference | Largest |
+|---|---:|---:|---:|
+| Pure fluids at their boiling point (Peng-Robinson) | 25 | 0.4 % | 1.7 % |
+| Water and steam (Steam IAPWS-95 package) | 6 | 0.0 % | 0.0 % |
+| Gas density at pressure (Peng-Robinson and tc-PR) | 14 | 2.1 % | 4.9 % |
+| Unit operations | 12 | 0.6 % | 1.0 % |
+| Mixtures: azeotropes at 1 atm (activity models) | 10 | in degrees | in degrees |
+| Viscosity and thermal conductivity (Peng-Robinson) | 18 | 0.9 % | 2.9 % |
+| Gases at high temperature (Peng-Robinson) | 26 | 0.1 % | 0.7 % |
+| Heating a liquid | 30 | 3.7 % | 35.9 % |
+| Reactions, combustion and heat integration | 7 | 0.1 % | 0.5 % |
+| Mixtures of light hydrocarbons and gases: bubble and dew pressure (Peng-Robinson) | 20 | 1.3 % | 6.2 % |
+| Polar liquids boiling under pressure (NRTL-PR) | 20 | 1.7 % | 5.6 % |
+
+Temperatures there (boiling points, valve outlets, azeotropes) are compared in degrees and listed line by line.
+The same checks run in the program's test suite before every release.
+
 ## Download and install
 
-1. Go to **[Releases](../../releases/latest)** and download `Enthalpia-2.0-Windows.zip` (337 MB).
+1. Go to **[Releases](../../releases/latest)** and download `Enthalpia-2.1-Windows.zip` (337 MB).
 2. Unpack the ZIP. Keep `Enthalpia-Setup.exe` and `Enthalpia-payload.zip` together in one folder.
 3. Double-click `Enthalpia-Setup.exe` and follow the steps. No administrator rights are needed.
 4. Start Enthalpia from the Desktop or the Start menu.
@@ -150,27 +174,27 @@ paid code-signing certificate. Choose **More info**, then **Run anyway**. To be 
 is the one published here, compare its SHA-256 fingerprint with this one:
 
 ```
-ab96d2bb0fe735b950f5d3bda2fe481fe153f148216ce151d66f43b786728be2  Enthalpia-2.0-Windows.zip
+a5154e454f14fca399125ba1be08221fb7c0dea9b810c8a42196de8b20085834  Enthalpia-2.1-Windows.zip
 ```
 
-In PowerShell: `Get-FileHash Enthalpia-2.0-Windows.zip -Algorithm SHA256`
+In PowerShell: `Get-FileHash Enthalpia-2.1-Windows.zip -Algorithm SHA256`
 
 **Needs:** Windows 10 or 11, 64-bit, about 1 GB of disk space. Nothing else has to be installed.
 To remove it: Settings > Apps > Enthalpia > Uninstall.
 
 ### macOS (Apple silicon)
 
-1. From **[Releases](../../releases/latest)** download `Enthalpia-2.0-macOS-arm64.dmg` (134 MB).
+1. From **[Releases](../../releases/latest)** download `Enthalpia-2.1-macOS-arm64.dmg` (135 MB).
 2. Open it and drag Enthalpia into the Applications folder.
 3. The first time, macOS refuses to open it, because the application is not signed with a paid Apple developer
    certificate. Open **System Settings > Privacy & Security**, scroll down to the message about Enthalpia and
    choose **Open Anyway**. After that it starts like any other application.
 
 ```
-ddc472ac333923ac154d190f7581b7463e6e88aecc855f95127e631b55262acd  Enthalpia-2.0-macOS-arm64.dmg
+fafd08c9b0ba546d34bf6043b125377529cdaed0cc023685fcc0e142afb0cea7  Enthalpia-2.1-macOS-arm64.dmg
 ```
 
-In Terminal: `shasum -a 256 Enthalpia-2.0-macOS-arm64.dmg`
+In Terminal: `shasum -a 256 Enthalpia-2.1-macOS-arm64.dmg`
 
 **Needs:** a Mac with an Apple processor (M1 or later). The macOS version passes the same automatic tests as the
 Windows version and has been tried by hand on a Mac. It has had less use than the Windows version, so please
@@ -216,5 +240,7 @@ not work, and telling others about Enthalpia, helps just as much.
 
 ## Problems and questions
 
-Use the **Issues** tab of this repository. If the program reports a fault of its own, the details are in
-`error.log` in the folder `.enthalpia` of your user folder; attach that file and say what you did.
+Use the **Issues** tab of this repository. In the program, **Help > Report a problem** saves one file with
+everything needed to look into it (what you wrote, the program version, the messages, and the open case if you
+leave that box ticked; your user name and folder names are taken out). Nothing is sent by the program: attach the
+file to your issue. A result that disagrees with a measured or published value is as welcome as a fault.
