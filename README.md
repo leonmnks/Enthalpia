@@ -4,6 +4,8 @@
 
 Version 2.0 for Windows and macOS. Copyright (c) 2026 Leonidas Manikis. All rights reserved.
 
+[![Support the project](https://img.shields.io/badge/Support%20the%20project-Donate-1a7431?style=for-the-badge)](https://revolut.me/l_manikis)
+
 Enthalpia lets you choose components and a property package, draw a flowsheet of unit operations joined by
 material streams, enter the feeds and the specifications, and see every stream and every duty calculated from
 the mass and energy balances with rigorous phase equilibrium. It is written for students and for engineers who
@@ -184,6 +186,17 @@ Enthalpia calculates with models and data that have limits, and it can be wrong.
 engineer's judgement, not a substitute for it. Before a result is used for design, safety, operation or
 purchasing, a qualified engineer must check it by independent means. The program comes without warranty of any
 kind; see the licence.
+
+## Support the project
+
+Enthalpia is free, and it stays free to use. It is written and maintained by one person in his own time. If it
+is useful to you and you would like to help it grow (more unit operations, more property data, a signed
+installer that Windows and macOS accept without a warning), you can send a donation of any size:
+
+**[Donate through Revolut](https://revolut.me/l_manikis)** (by card, no Revolut account needed)
+
+A donation is a gift: it buys no licence, no support contract and no say over the program. Reporting what does
+not work, and telling others about Enthalpia, helps just as much.
 
 ## Problems and questions
 
