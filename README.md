@@ -172,8 +172,9 @@ ddc472ac333923ac154d190f7581b7463e6e88aecc855f95127e631b55262acd  Enthalpia-2.0-
 
 In Terminal: `shasum -a 256 Enthalpia-2.0-macOS-arm64.dmg`
 
-**Needs:** a Mac with an Apple processor (M1 or later). The macOS version is built and tested automatically on
-such a Mac; it has had far less use than the Windows version, so please report what does not work.
+**Needs:** a Mac with an Apple processor (M1 or later). The macOS version passes the same automatic tests as the
+Windows version and has been tried by hand on a Mac. It has had less use than the Windows version, so please
+report what does not work.
 
 ## Licence
 
