@@ -6,6 +6,8 @@ Version 2.0 for Windows and macOS. Copyright (c) 2026 Leonidas Manikis. All righ
 
 [![Support the project](https://img.shields.io/badge/Support%20the%20project-Donate-1a7431?style=for-the-badge)](https://revolut.me/l_manikis)
 
+*Every donor is named and thanked in the finished program and its guide.*
+
 Enthalpia lets you choose components and a property package, draw a flowsheet of unit operations joined by
 material streams, enter the feeds and the specifications, and see every stream and every duty calculated from
 the mass and energy balances with rigorous phase equilibrium. It is written for students and for engineers who
