@@ -195,6 +195,10 @@ installer that Windows and macOS accept without a warning), you can send a donat
 
 **[Donate through Revolut](https://revolut.me/l_manikis)** (by card, no Revolut account needed)
 
+Every donation is acknowledged: everyone who donates will be named and thanked in the finished program and in its
+guide. If you would rather not be named, say so in the note of your payment and you will be thanked without your
+name.
+
 A donation is a gift: it buys no licence, no support contract and no say over the program. Reporting what does
 not work, and telling others about Enthalpia, helps just as much.
 
