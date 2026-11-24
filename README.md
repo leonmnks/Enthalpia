@@ -2,6 +2,11 @@
 
 **A desktop process simulator for chemical engineering: steady-state and dynamic simulation, free to use.**
 
+[![Download for Windows](https://img.shields.io/badge/Download-Windows%20(337%20MB)-1a7431?style=for-the-badge&logo=windows)](../../releases/latest/download/Enthalpia-2.0-Windows.zip)
+[![Download for macOS](https://img.shields.io/badge/Download-macOS%20Apple%20silicon%20(134%20MB)-1a7431?style=for-the-badge&logo=apple)](../../releases/latest/download/Enthalpia-2.0-macOS-arm64.dmg)
+
+How to install is described [further down](#download-and-install).
+
 Version 2.0 for Windows and macOS. Copyright (c) 2026 Leonidas Manikis. All rights reserved.
 
 [![Support the project](https://img.shields.io/badge/Support%20the%20project-Donate-1a7431?style=for-the-badge)](https://revolut.me/l_manikis)
@@ -12,6 +17,10 @@ Enthalpia lets you choose components and a property package, draw a flowsheet of
 material streams, enter the feeds and the specifications, and see every stream and every duty calculated from
 the mass and energy balances with rigorous phase equilibrium. It is written for students and for engineers who
 want a first answer quickly and want to see how it was reached.
+
+[![Watch the overview film](pictures/video_thumb.png)](video/enthalpia_overview.mp4)
+
+*Click the picture to watch the 81-second overview.*
 
 ![The opening page: start a new case, continue a recent one, or open an example](pictures/01_start.png)
 
