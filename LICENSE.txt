@@ -1,4 +1,4 @@
-ENTHALPIA 2.1 - LICENCE
+ENTHALPIA 3.0 - LICENCE
 
 Copyright (c) 2026 Leonidas Manikis. All rights reserved.
 
@@ -87,7 +87,7 @@ gross negligence.
 
 8. OTHER VERSIONS
 
-This licence covers version 2.1 of Enthalpia as published by the author. Later versions may be offered under
+This licence covers version 3.0 of Enthalpia as published by the author. Later versions may be offered under
 other terms, including for payment. That does not take away your right to go on using this version under this
 licence.
 

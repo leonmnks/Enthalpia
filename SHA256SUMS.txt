@@ -1,2 +1,2 @@
-a5154e454f14fca399125ba1be08221fb7c0dea9b810c8a42196de8b20085834  Enthalpia-2.1-Windows.zip
+f7769187a5c65abad218633940970ef9d5704be432d68f8fdfe8db214bd984f7  Enthalpia-3.0-Setup.exe
 fafd08c9b0ba546d34bf6043b125377529cdaed0cc023685fcc0e142afb0cea7  Enthalpia-2.1-macOS-arm64.dmg

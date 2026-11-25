@@ -1,6 +1,6 @@
 # Enthalpia against published values
 
-Enthalpia 2.0, 24 November 2026. 188 checks.
+Enthalpia 3.0, 24 November 2026. 224 checks.
 
 Each line below is something Enthalpia calculated, set beside a value that does not come from Enthalpia. Nothing is left out: the checks where the program is weakest are in the table with the rest.
 
@@ -299,6 +299,49 @@ Reference: GERG-2008 equation for natural gas.
 Average difference 1.7 %, largest 5.6 % (quantities given in per cent).
 
 Reference: Reference equation of state.
+
+## 12. Mixtures: measured boiling of binary liquids at 1 atm (NRTL and UNIFAC)
+
+| Case | Quantity | Reference | Enthalpia | Difference |
+|---|---|---:|---:|---:|
+| methanol + water, 10 mol % methanol in the liquid (NRTL) | Mole fraction of methanol in the vapour | 0.418 | 0.425 | +0.007 |
+| methanol + water, 10 mol % methanol in the liquid (NRTL) | Boiling temperature | 87.70 C | 87.60 C | -0.10 C |
+| methanol + water, 30 mol % methanol in the liquid (NRTL) | Mole fraction of methanol in the vapour | 0.665 | 0.673 | +0.008 |
+| methanol + water, 30 mol % methanol in the liquid (NRTL) | Boiling temperature | 78.00 C | 77.82 C | -0.18 C |
+| methanol + water, 50 mol % methanol in the liquid (NRTL) | Mole fraction of methanol in the vapour | 0.779 | 0.786 | +0.007 |
+| methanol + water, 50 mol % methanol in the liquid (NRTL) | Boiling temperature | 73.10 C | 72.91 C | -0.19 C |
+| methanol + water, 80 mol % methanol in the liquid (NRTL) | Mole fraction of methanol in the vapour | 0.915 | 0.916 | +0.001 |
+| methanol + water, 80 mol % methanol in the liquid (NRTL) | Boiling temperature | 67.60 C | 67.57 C | -0.03 C |
+| methanol + water, 10 mol % methanol in the liquid (UNIFAC) | Mole fraction of methanol in the vapour | 0.418 | 0.423 | +0.005 |
+| methanol + water, 30 mol % methanol in the liquid (UNIFAC) | Mole fraction of methanol in the vapour | 0.665 | 0.669 | +0.004 |
+| methanol + water, 50 mol % methanol in the liquid (UNIFAC) | Mole fraction of methanol in the vapour | 0.779 | 0.786 | +0.007 |
+| methanol + water, 80 mol % methanol in the liquid (UNIFAC) | Mole fraction of methanol in the vapour | 0.915 | 0.919 | +0.004 |
+| ethanol + water, 10 mol % ethanol in the liquid (NRTL) | Mole fraction of ethanol in the vapour | 0.438 | 0.435 | -0.003 |
+| ethanol + water, 10 mol % ethanol in the liquid (NRTL) | Boiling temperature | 86.70 C | 86.76 C | +0.06 C |
+| ethanol + water, 33 mol % ethanol in the liquid (NRTL) | Mole fraction of ethanol in the vapour | 0.583 | 0.597 | +0.014 |
+| ethanol + water, 33 mol % ethanol in the liquid (NRTL) | Boiling temperature | 81.50 C | 81.08 C | -0.42 C |
+| ethanol + water, 51 mol % ethanol in the liquid (NRTL) | Mole fraction of ethanol in the vapour | 0.656 | 0.661 | +0.005 |
+| ethanol + water, 51 mol % ethanol in the liquid (NRTL) | Boiling temperature | 79.80 C | 79.62 C | -0.18 C |
+| ethanol + water, 75 mol % ethanol in the liquid (NRTL) | Mole fraction of ethanol in the vapour | 0.781 | 0.780 | -0.001 |
+| ethanol + water, 75 mol % ethanol in the liquid (NRTL) | Boiling temperature | 78.41 C | 78.39 C | -0.02 C |
+| ethanol + water, 10 mol % ethanol in the liquid (UNIFAC) | Mole fraction of ethanol in the vapour | 0.438 | 0.446 | +0.008 |
+| ethanol + water, 33 mol % ethanol in the liquid (UNIFAC) | Mole fraction of ethanol in the vapour | 0.583 | 0.581 | -0.002 |
+| ethanol + water, 51 mol % ethanol in the liquid (UNIFAC) | Mole fraction of ethanol in the vapour | 0.656 | 0.657 | +0.001 |
+| ethanol + water, 75 mol % ethanol in the liquid (UNIFAC) | Mole fraction of ethanol in the vapour | 0.781 | 0.787 | +0.006 |
+| acetone + water, 10 mol % acetone in the liquid (NRTL) | Mole fraction of acetone in the vapour | 0.730 | 0.744 | +0.014 |
+| acetone + water, 10 mol % acetone in the liquid (NRTL) | Boiling temperature | 68.53 C | 67.17 C | -1.36 C |
+| acetone + water, 30 mol % acetone in the liquid (NRTL) | Mole fraction of acetone in the vapour | 0.812 | 0.805 | -0.007 |
+| acetone + water, 30 mol % acetone in the liquid (NRTL) | Boiling temperature | 61.87 C | 62.16 C | +0.29 C |
+| acetone + water, 50 mol % acetone in the liquid (NRTL) | Mole fraction of acetone in the vapour | 0.839 | 0.839 | -0.000 |
+| acetone + water, 50 mol % acetone in the liquid (NRTL) | Boiling temperature | 59.95 C | 59.79 C | -0.16 C |
+| acetone + water, 80 mol % acetone in the liquid (NRTL) | Mole fraction of acetone in the vapour | 0.895 | 0.897 | +0.002 |
+| acetone + water, 80 mol % acetone in the liquid (NRTL) | Boiling temperature | 57.49 C | 57.08 C | -0.41 C |
+| acetone + water, 10 mol % acetone in the liquid (UNIFAC) | Mole fraction of acetone in the vapour | 0.730 | 0.741 | +0.010 |
+| acetone + water, 30 mol % acetone in the liquid (UNIFAC) | Mole fraction of acetone in the vapour | 0.812 | 0.809 | -0.003 |
+| acetone + water, 50 mol % acetone in the liquid (UNIFAC) | Mole fraction of acetone in the vapour | 0.839 | 0.840 | +0.001 |
+| acetone + water, 80 mol % acetone in the liquid (UNIFAC) | Mole fraction of acetone in the vapour | 0.895 | 0.899 | +0.004 |
+
+Reference: Measured vapour-liquid equilibrium at 101.3 kPa (Perry's Chemical Engineers' Handbook, table of binary data).
 
 ## What this says
 

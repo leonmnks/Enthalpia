@@ -2,12 +2,12 @@
 
 **A desktop process simulator for chemical engineering: steady-state and dynamic simulation, free to use.**
 
-[![Download for Windows](https://img.shields.io/badge/Download-Windows%20(337%20MB)-1a7431?style=for-the-badge&logo=windows)](../../releases/latest/download/Enthalpia-2.1-Windows.zip)
+[![Download for Windows](https://img.shields.io/badge/Download-Windows%20(342%20MB)-1a7431?style=for-the-badge&logo=windows)](../../releases/latest/download/Enthalpia-3.0-Setup.exe)
 [![Download for macOS](https://img.shields.io/badge/Download-macOS%20Apple%20silicon%20(135%20MB)-1a7431?style=for-the-badge&logo=apple)](../../releases/latest/download/Enthalpia-2.1-macOS-arm64.dmg)
 
 How to install is described [further down](#download-and-install).
 
-Version 2.1 for Windows and macOS. Copyright (c) 2026 Leonidas Manikis. All rights reserved.
+Version 3.0 for Windows; version 2.1 for macOS. Copyright (c) 2026 Leonidas Manikis. All rights reserved.
 
 [![Support the project](https://img.shields.io/badge/Support%20the%20project-Donate-1a7431?style=for-the-badge)](https://revolut.me/l_manikis)
 
@@ -29,6 +29,25 @@ want a first answer quickly and want to see how it was reached.
 ![The flowsheet: units from the palette on the left, results in the workbook below](pictures/09_sim_gas_plant.png)
 
 *The flowsheet: units from the palette on the left, results in the workbook below*
+
+## New in version 3.0
+
+- **Checked against data.** 224 results of the program are set beside published values, measured mixtures
+  included, and the whole table is [in this repository](VALIDATION.md). Water in the equation-of-state packages,
+  gases with water, heat capacities of hot gases and liquids were corrected on the way.
+- **A guided first case.** A small window takes a newcomer through a first simulation in nine steps.
+- **Find anything (Ctrl+K).** A few letters find any command, tool, unit or stream.
+- **Exchanger rating.** A shell-and-tube bundle set against the duty: film coefficients, overall coefficient,
+  margin and pressure drops.
+- **Gas checks.** Water content, water and hydrocarbon dew points and the hydrate temperature of every gas stream.
+- **The flowsheet as a drawing.** PNG or PDF, with the stream table underneath.
+- **Everyday things.** Paste a composition from a spreadsheet, case files of their own kind (`.enth`) that open
+  with a double-click, a check for new versions, a file to send when something goes wrong, and an installer that
+  is one file.
+
+![Exchanger rating: the bundle on the left, what it does on the right](pictures/35_rating.png)
+
+*Exchanger rating: the bundle on the left, what it does on the right*
 
 ## How it works, in pictures
 
@@ -140,7 +159,7 @@ repository: [Enthalpia-Documentation.pdf](Enthalpia-Documentation.pdf). The same
 
 ## Can the results be trusted?
 
-Check for yourself: **[VALIDATION.md](VALIDATION.md)** sets 188 results of Enthalpia beside values that do not
+Check for yourself: **[VALIDATION.md](VALIDATION.md)** sets 224 results of Enthalpia beside values that do not
 come from a simulator: the reference equations of state of the pure fluids, the GERG-2008 equation for natural
 gas, the international steam tables, azeotropes from the handbooks, and hand calculations. Nothing is left out
 of that table, including the cases where the program is weakest.
@@ -158,31 +177,34 @@ of that table, including the cases where the program is weakest.
 | Reactions, combustion and heat integration | 7 | 0.1 % | 0.5 % |
 | Mixtures of light hydrocarbons and gases: bubble and dew pressure (Peng-Robinson) | 20 | 1.3 % | 6.2 % |
 | Polar liquids boiling under pressure (NRTL-PR) | 20 | 1.7 % | 5.6 % |
+| Mixtures: measured boiling of binary liquids at 1 atm (NRTL and UNIFAC) | 36 | in degrees | in degrees |
 
 Temperatures there (boiling points, valve outlets, azeotropes) are compared in degrees and listed line by line.
 The same checks run in the program's test suite before every release.
 
 ## Download and install
 
-1. Go to **[Releases](../../releases/latest)** and download `Enthalpia-2.1-Windows.zip` (337 MB).
-2. Unpack the ZIP. Keep `Enthalpia-Setup.exe` and `Enthalpia-payload.zip` together in one folder.
-3. Double-click `Enthalpia-Setup.exe` and follow the steps. No administrator rights are needed.
-4. Start Enthalpia from the Desktop or the Start menu.
+1. Go to **[Releases](../../releases/latest)** and download `Enthalpia-3.0-Setup.exe` (342 MB). It is one file; there is nothing to unpack.
+2. Double-click it. A small picture shows for a few seconds while it prepares; then follow the steps.
+   No administrator rights are needed.
+3. Start Enthalpia from the Desktop or the Start menu.
 
 Windows may say that the program comes from an unknown publisher, because the installer does not yet carry a
 paid code-signing certificate. Choose **More info**, then **Run anyway**. To be sure that the file you downloaded
 is the one published here, compare its SHA-256 fingerprint with this one:
 
 ```
-a5154e454f14fca399125ba1be08221fb7c0dea9b810c8a42196de8b20085834  Enthalpia-2.1-Windows.zip
+f7769187a5c65abad218633940970ef9d5704be432d68f8fdfe8db214bd984f7  Enthalpia-3.0-Setup.exe
 ```
 
-In PowerShell: `Get-FileHash Enthalpia-2.1-Windows.zip -Algorithm SHA256`
+In PowerShell: `Get-FileHash Enthalpia-3.0-Setup.exe -Algorithm SHA256`
 
 **Needs:** Windows 10 or 11, 64-bit, about 1 GB of disk space. Nothing else has to be installed.
 To remove it: Settings > Apps > Enthalpia > Uninstall.
 
 ### macOS (Apple silicon)
+
+**The macOS download is still version 2.1.** Version 3.0 for the Mac follows; what is new in it is on Windows only until then.
 
 1. From **[Releases](../../releases/latest)** download `Enthalpia-2.1-macOS-arm64.dmg` (135 MB).
 2. Open it and drag Enthalpia into the Applications folder.
