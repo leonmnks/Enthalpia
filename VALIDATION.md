@@ -1,6 +1,6 @@
 # Enthalpia against published values
 
-Enthalpia 3.0, 24 November 2026. 224 checks.
+Enthalpia 3.1, 26 November 2026. 246 checks.
 
 Each line below is something Enthalpia calculated, set beside a value that does not come from Enthalpia. Nothing is left out: the checks where the program is weakest are in the table with the rest.
 
@@ -342,6 +342,44 @@ Reference: Reference equation of state.
 | acetone + water, 80 mol % acetone in the liquid (UNIFAC) | Mole fraction of acetone in the vapour | 0.895 | 0.899 | +0.004 |
 
 Reference: Measured vapour-liquid equilibrium at 101.3 kPa (Perry's Chemical Engineers' Handbook, table of binary data).
+
+## 13. Two liquid phases: mutual solubility of water and 1-butanol at 25 C (UNIFAC)
+
+| Case | Quantity | Reference | Enthalpia | Difference |
+|---|---|---:|---:|---:|
+| water + 1-butanol, the water-rich liquid | Mole fraction of 1-butanol | 0.0190 | 0.0196 | +0.001 |
+| water + 1-butanol, the butanol-rich liquid | Mole fraction of water | 0.510 | 0.518 | +0.008 |
+
+Reference: Measured mutual solubility at 25 C (IUPAC-NIST Solubility Data Series, 1-butanol with water).
+
+## 14. Reaction in a liquid on a resin catalyst: TAME at equilibrium, eleven runs at 325 to 363 K (UNIFAC)
+
+| Case | Quantity | Reference | Enthalpia | Difference |
+|---|---|---:|---:|---:|
+| methanol / isoamylenes = 1 at 51.5 C | Mole fraction of the ether at equilibrium | 0.198 | 0.188 | -0.010 |
+| methanol / isoamylenes = 1 at 51.5 C | Activity coefficient of methanol | 7.223 | 7.216 | -0.1 % |
+| methanol / isoamylenes = 0.5 at 52.1 C | Mole fraction of the ether at equilibrium | 0.129 | 0.123 | -0.006 |
+| methanol / isoamylenes = 0.5 at 52.1 C | Activity coefficient of methanol | 11.52 | 11.56 | +0.3 % |
+| methanol / isoamylenes = 1 at 70.2 C | Mole fraction of the ether at equilibrium | 0.163 | 0.156 | -0.007 |
+| methanol / isoamylenes = 1 at 70.2 C | Activity coefficient of methanol | 6.196 | 6.209 | +0.2 % |
+| methanol / isoamylenes = 0.5 at 71.1 C | Mole fraction of the ether at equilibrium | 0.115 | 0.108 | -0.007 |
+| methanol / isoamylenes = 0.5 at 71.1 C | Activity coefficient of methanol | 9.627 | 9.662 | +0.4 % |
+| methanol / isoamylenes = 2 at 71.5 C | Mole fraction of the ether at equilibrium | 0.155 | 0.151 | -0.004 |
+| methanol / isoamylenes = 2 at 71.5 C | Activity coefficient of methanol | 3.026 | 3.022 | -0.1 % |
+| methanol / isoamylenes = 1 at 79.5 C | Mole fraction of the ether at equilibrium | 0.148 | 0.141 | -0.007 |
+| methanol / isoamylenes = 1 at 79.5 C | Activity coefficient of methanol | 5.918 | 5.929 | +0.2 % |
+| methanol / isoamylenes = 0.5 at 80.1 C | Mole fraction of the ether at equilibrium | 0.104 | 0.0992 | -0.005 |
+| methanol / isoamylenes = 0.5 at 80.1 C | Activity coefficient of methanol | 8.910 | 8.930 | +0.2 % |
+| methanol / isoamylenes = 1 at 85.5 C | Mole fraction of the ether at equilibrium | 0.138 | 0.131 | -0.007 |
+| methanol / isoamylenes = 1 at 85.5 C | Activity coefficient of methanol | 5.369 | 5.373 | +0.1 % |
+| methanol / isoamylenes = 2 at 89.1 C | Mole fraction of the ether at equilibrium | 0.127 | 0.125 | -0.002 |
+| methanol / isoamylenes = 2 at 89.1 C | Activity coefficient of methanol | 2.839 | 2.837 | -0.1 % |
+| methanol / isoamylenes = 0.5 at 89.9 C | Mole fraction of the ether at equilibrium | 0.0930 | 0.0892 | -0.004 |
+| methanol / isoamylenes = 0.5 at 89.9 C | Activity coefficient of methanol | 8.149 | 8.167 | +0.2 % |
+
+Average difference 0.2 %, largest 0.4 % (quantities given in per cent).
+
+Reference: Measured in a batch reactor on Amberlyst 15 (Ferreira and Loureiro, Ind. Eng. Chem. Res. 43 (2004) 5156, Table 1 and equations 6 and 7).
 
 ## What this says
 

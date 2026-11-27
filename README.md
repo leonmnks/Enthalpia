@@ -2,12 +2,12 @@
 
 **A desktop process simulator for chemical engineering: steady-state and dynamic simulation, free to use.**
 
-[![Download for Windows](https://img.shields.io/badge/Download-Windows%20(342%20MB)-1a7431?style=for-the-badge&logo=windows)](../../releases/latest/download/Enthalpia-3.0-Setup.exe)
+[![Download for Windows](https://img.shields.io/badge/Download-Windows%20(342%20MB)-1a7431?style=for-the-badge&logo=windows)](../../releases/latest/download/Enthalpia-3.1-Setup.exe)
 [![Download for macOS](https://img.shields.io/badge/Download-macOS%20Apple%20silicon%20(135%20MB)-1a7431?style=for-the-badge&logo=apple)](../../releases/latest/download/Enthalpia-2.1-macOS-arm64.dmg)
 
 How to install is described [further down](#download-and-install).
 
-Version 3.0 for Windows; version 2.1 for macOS. Copyright (c) 2026 Leonidas Manikis. All rights reserved.
+Version 3.1 for Windows; version 2.1 for macOS. Copyright (c) 2026 Leonidas Manikis. All rights reserved.
 
 [![Support the project](https://img.shields.io/badge/Support%20the%20project-Donate-1a7431?style=for-the-badge)](https://revolut.me/l_manikis)
 
@@ -30,9 +30,23 @@ want a first answer quickly and want to see how it was reached.
 
 *The flowsheet: units from the palette on the left, results in the workbook below*
 
+## New in version 3.1
+
+- **Solving backwards.** A value entered on a product is used wherever it settles something that is otherwise
+  open: it completes a unit that has no specification of its own, gives back a feed that was not entered
+  completely, and a flow on a product fixes the flow of the feed.
+- **Reactions on a solid catalyst.** Rates on liquid activities, reversible reactions tied to an equilibrium
+  constant, rates per kg of catalyst (a fixed bed) and adsorption terms, checked against published measurements
+  of TAME synthesis on ion exchange resins. A new example case, *TAME resin bed*.
+- **Liquid-liquid extraction.** Two liquids in equilibrium from the activity model, a counter-current extractor,
+  and a three-phase separator that works as a decanter.
+- **Liquids of your own.** A non-volatile liquid such as an ionic liquid as a component, with NRTL parameters
+  that belong to the case.
+- **Shortcut column.** Product purities in place of recoveries, and the reflux ratio itself.
+
 ## New in version 3.0
 
-- **Checked against data.** 224 results of the program are set beside published values, measured mixtures
+- **Checked against data.** 246 results of the program are set beside published values, measured mixtures
   included, and the whole table is [in this repository](VALIDATION.md). Water in the equation-of-state packages,
   gases with water, heat capacities of hot gases and liquids were corrected on the way.
 - **A guided first case.** A small window takes a newcomer through a first simulation in nine steps.
@@ -67,8 +81,8 @@ The program says which packages suit the mixture and what data is missing.
 
 ### 2. Draw the flowsheet and enter the data
 
-27 unit operations: mixers, splitters, valves, pumps, compressors, expanders, heaters, coolers, heat exchangers,
-pipes, tanks, separators, shortcut and rigorous distillation, absorbers, five kinds of reactor, recycle, adjust,
+28 unit operations: mixers, splitters, valves, pumps, compressors, expanders, heaters, coolers, heat exchangers,
+pipes, tanks, separators, shortcut and rigorous distillation, absorbers, a liquid-liquid extractor, five kinds of reactor, recycle, adjust,
 set, spreadsheet and script blocks. Every edit is solved at once; undo and redo cover the last hundred changes.
 
 ![A stream: any two of temperature, pressure and vapour fraction, the flow and the composition](pictures/06_stream_dialog.png)
@@ -159,7 +173,7 @@ repository: [Enthalpia-Documentation.pdf](Enthalpia-Documentation.pdf). The same
 
 ## Can the results be trusted?
 
-Check for yourself: **[VALIDATION.md](VALIDATION.md)** sets 224 results of Enthalpia beside values that do not
+Check for yourself: **[VALIDATION.md](VALIDATION.md)** sets 246 results of Enthalpia beside values that do not
 come from a simulator: the reference equations of state of the pure fluids, the GERG-2008 equation for natural
 gas, the international steam tables, azeotropes from the handbooks, and hand calculations. Nothing is left out
 of that table, including the cases where the program is weakest.
@@ -178,13 +192,15 @@ of that table, including the cases where the program is weakest.
 | Mixtures of light hydrocarbons and gases: bubble and dew pressure (Peng-Robinson) | 20 | 1.3 % | 6.2 % |
 | Polar liquids boiling under pressure (NRTL-PR) | 20 | 1.7 % | 5.6 % |
 | Mixtures: measured boiling of binary liquids at 1 atm (NRTL and UNIFAC) | 36 | in degrees | in degrees |
+| Two liquid phases: mutual solubility of water and 1-butanol at 25 C (UNIFAC) | 2 | in degrees | in degrees |
+| Reaction in a liquid on a resin catalyst: TAME at equilibrium, eleven runs at 325 to 363 K (UNIFAC) | 20 | 0.2 % | 0.4 % |
 
 Temperatures there (boiling points, valve outlets, azeotropes) are compared in degrees and listed line by line.
 The same checks run in the program's test suite before every release.
 
 ## Download and install
 
-1. Go to **[Releases](../../releases/latest)** and download `Enthalpia-3.0-Setup.exe` (342 MB). It is one file; there is nothing to unpack.
+1. Go to **[Releases](../../releases/latest)** and download `Enthalpia-3.1-Setup.exe` (342 MB). It is one file; there is nothing to unpack.
 2. Double-click it. A small picture shows for a few seconds while it prepares; then follow the steps.
    No administrator rights are needed.
 3. Start Enthalpia from the Desktop or the Start menu.
@@ -194,17 +210,17 @@ paid code-signing certificate. Choose **More info**, then **Run anyway**. To be 
 is the one published here, compare its SHA-256 fingerprint with this one:
 
 ```
-f7769187a5c65abad218633940970ef9d5704be432d68f8fdfe8db214bd984f7  Enthalpia-3.0-Setup.exe
+7c03125543f4b723388d797ac99cd60bee9590fe1307b5b27c74a6d66375bec8  Enthalpia-3.1-Setup.exe
 ```
 
-In PowerShell: `Get-FileHash Enthalpia-3.0-Setup.exe -Algorithm SHA256`
+In PowerShell: `Get-FileHash Enthalpia-3.1-Setup.exe -Algorithm SHA256`
 
 **Needs:** Windows 10 or 11, 64-bit, about 1 GB of disk space. Nothing else has to be installed.
 To remove it: Settings > Apps > Enthalpia > Uninstall.
 
 ### macOS (Apple silicon)
 
-**The macOS download is still version 2.1.** Version 3.0 for the Mac follows; what is new in it is on Windows only until then.
+**The macOS download is still version 2.1.** Version 3.1 for the Mac follows; what is new in it is on Windows only until then.
 
 1. From **[Releases](../../releases/latest)** download `Enthalpia-2.1-macOS-arm64.dmg` (135 MB).
 2. Open it and drag Enthalpia into the Applications folder.

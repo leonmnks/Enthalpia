@@ -1,2 +1,2 @@
-f7769187a5c65abad218633940970ef9d5704be432d68f8fdfe8db214bd984f7  Enthalpia-3.0-Setup.exe
+7c03125543f4b723388d797ac99cd60bee9590fe1307b5b27c74a6d66375bec8  Enthalpia-3.1-Setup.exe
 fafd08c9b0ba546d34bf6043b125377529cdaed0cc023685fcc0e142afb0cea7  Enthalpia-2.1-macOS-arm64.dmg
